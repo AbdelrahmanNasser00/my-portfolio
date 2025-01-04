@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 
 const LeftSide = () => {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState<string>("#about");
+
+  useEffect(() => {
+    if (activeSection === "#about") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [activeSection]);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
@@ -19,9 +26,11 @@ const LeftSide = () => {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, [activeSection]);
+
   const links = [
     { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
@@ -33,12 +42,12 @@ const LeftSide = () => {
           <a href="/">Abdelrahman Abdelnasser</a>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          Front End Engineer
+          Software Engineer
         </h2>
-        <p className="mt-4 max-w-xs leading-normal text-slate-400">
+        {/* <p className="mt-4 max-w-xs leading-normal text-slate-400">
           I build accessible, pixel-perfect digital experiences for the web.
-        </p>
-        <nav className="mt-14">
+        </p> */}
+        <nav className="mt-14 hidden lg:block">
           <ul>
             {links.map((link, index) => (
               <NavItem

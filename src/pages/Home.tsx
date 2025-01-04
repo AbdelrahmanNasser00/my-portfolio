@@ -1,11 +1,17 @@
-import LeftSide from "../components/home/LeftSide";
-import RightSide from "../components/home/RightSide";
+import LeftSide from "../components/LeftSide/LeftSide";
+import RightSide from "../components/RightSide/RightSide";
+import Switch from "../components/Switch";
 
 const Home = () => {
   return (
-    <div className="bg-slate-900 h-screen">
-      <LeftSide />
-      <RightSide />
+    <div className="relative">
+      <div className=" flex justify-end py-2 fixed w-[67%]">
+        <Switch />
+      </div>
+      <div className="max-w-screen-xl lg:flex lg:flex-row px-12">
+        <LeftSide />
+        <RightSide />
+      </div>
     </div>
   );
 };
