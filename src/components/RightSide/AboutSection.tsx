@@ -12,7 +12,7 @@ const AboutSection = () => {
         <div className="absolute left-10 -top-3 md:-top-4 md:left-28 md:w-9 md:h-9 lg:w-6 lg:h-6 w-6 h-6 bg-primary rounded-full animate-bounce"></div>
         <div className="absolute right-10 -bottom-3 md:-bottom-4 md:right-28 md:w-9 md:h-9 lg:w-6 lg:h-6 w-6 h-6 bg-primary rounded-full animate-pulse"></div>
       </div>
-      <h2 className="text-3xl lg:hidden uppercase font-bold mb-4 text-slate-200">
+      <h2 className="text-xl lg:hidden uppercase font-bold mb-4 text-slate-200">
         about
       </h2>
       <div>

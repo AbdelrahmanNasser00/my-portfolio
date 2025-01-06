@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundColor: {
         primary: "#4fd1c5",
+        secondary: "#ae00ff",
       },
       boxShadow: {
         "profile-glow": "0 0 20px 5px #4fd1c5",
