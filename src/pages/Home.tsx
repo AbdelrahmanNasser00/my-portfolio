@@ -2,9 +2,9 @@ import LeftSide from "../components/LeftSide/LeftSide";
 import RightSide from "../components/RightSide/RightSide";
 import Switch from "../components/Switch";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className=" flex justify-end py-2 fixed w-[67%]">
         <Switch />
       </div>

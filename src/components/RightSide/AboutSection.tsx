@@ -7,7 +7,7 @@ const AboutSection = () => {
         <img
           src={ProfileImg}
           alt="Profile img"
-          className="w-1/2 h-auto border-cyan-500 rounded-full shadow- hover:shadow-profile-hover transition-shadow duration-300 shadow-profile-glow"
+          className="w-1/2 h-auto border-cyan-500 rounded-full hover:shadow-profile-hover transition-shadow duration-300 shadow-profile-glow"
         />
         <div className="absolute left-10 -top-3 md:-top-4 md:left-28 md:w-9 md:h-9 lg:w-6 lg:h-6 w-6 h-6 bg-primary rounded-full animate-bounce"></div>
         <div className="absolute right-10 -bottom-3 md:-bottom-4 md:right-28 md:w-9 md:h-9 lg:w-6 lg:h-6 w-6 h-6 bg-primary rounded-full animate-pulse"></div>

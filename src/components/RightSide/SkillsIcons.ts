@@ -17,6 +17,7 @@ import cplusplusIcon from "../../assets/imgs/c-plusplus.svg";
 
 const skillsIcons = [
   { name: "React", icon: reactIcon },
+  { name: "TypeScript", icon: typescriptIcon },
   { name: "JavaScript", icon: jsIcon },
   { name: "HTML5", icon: htmlIcon },
   { name: "CSS3", icon: cssIcon },
@@ -30,7 +31,6 @@ const skillsIcons = [
   { name: "Material-UI", icon: materialUiIcon },
   { name: "MySQL", icon: mysqlIcon },
   { name: "MongoDB", icon: mongodbIcon },
-  { name: "TypeScript", icon: typescriptIcon },
   { name: "C++", icon: cplusplusIcon },
 ];
 
