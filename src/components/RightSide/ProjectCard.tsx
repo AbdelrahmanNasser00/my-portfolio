@@ -21,10 +21,14 @@ const ProjectCard: React.FC<cardProps> = ({
   return (
     <div className="w-full border border-color-content-outline border-radius rounded-lg mb-5">
       <Carousel>
-        <CarouselContent>
+        <CarouselContent className="overflow-hidden">
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <img src={image} alt={`${title} screenshot ${index + 1}`} />
+              <img
+                src={image}
+                alt={`${title} screenshot ${index + 1}`}
+                className="rounded-t-lg"
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
