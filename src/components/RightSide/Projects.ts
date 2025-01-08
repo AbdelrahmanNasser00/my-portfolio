@@ -24,6 +24,7 @@ interface Project {
   deploymentLink: string;
   skills: string[];
 }
+console.log(project1Image, project1Image2, project1Image3);
 
 const projects: Project[] = [
   {
@@ -53,6 +54,7 @@ const projects: Project[] = [
       "MongoDB",
       "Node.js",
       "JWT",
+      "axios",
     ],
   },
   {
@@ -68,8 +70,9 @@ const projects: Project[] = [
       project2Image5,
       project2Image6,
     ],
-    githubLink: "https://github.com/AbdelrahmanNasser00/project-2",
-    deploymentLink: "https://project-2.netlify.app",
+    githubLink:
+      "https://github.com/AbdelrahmanNasser00/Realtime-Lecturing-client",
+    deploymentLink: "https://realtime-lecturing.netlify.app/",
     skills: [
       "React",
       "Redux",
@@ -81,6 +84,8 @@ const projects: Project[] = [
       "Socket.io",
       "WebRTC",
       "Peer2Peer",
+      "axios",
+      "sweetalert2",
     ],
   },
   //   {

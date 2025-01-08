@@ -18,16 +18,18 @@ const ProjectCard: React.FC<cardProps> = ({
   deploymentLink,
   skills,
 }) => {
+  console.log(images);
   return (
     <div className="w-full border border-color-content-outline border-radius rounded-lg mb-5">
       <Carousel>
-        <CarouselContent className="overflow-hidden">
+        <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <img
                 src={image}
                 alt={`${title} screenshot ${index + 1}`}
                 className="rounded-t-lg"
+                loading="eager"
               />
             </CarouselItem>
           ))}
@@ -38,7 +40,9 @@ const ProjectCard: React.FC<cardProps> = ({
         <p>{description}</p>
         <div className="mt-2 flex">
           <ProjectGithub githubLink={githubLink} />
-          <ProjectDeployment deploymentLink={deploymentLink} />
+          {deploymentLink !== "" && (
+            <ProjectDeployment deploymentLink={deploymentLink} />
+          )}
         </div>
         <div>
           <ul className="flex flex-wrap mt-3">
