@@ -39,8 +39,8 @@ const LeftSide = () => {
   return (
     <header className="pt-24 lg:w-1/2 w-full lg:h-screen lg:sticky lg:top-0">
       <div>
-        <h1 className="text-slate-200 text-4xl font-bold tracking-tight sm:text-5xl">
-          <a href="/">Abdelrahman Abdelnasser</a>
+        <h1 className="text-one text-4xl font-bold tracking-tight sm:text-5xl">
+          Abdelrahman Abdelnasser
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
           Software Engineer

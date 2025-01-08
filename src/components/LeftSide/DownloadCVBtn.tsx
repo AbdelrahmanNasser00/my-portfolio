@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
     padding: 0.6em 0.8em;
     outline: none;
     border: 1px solid #303030;
-    color: #4fd1c5;
+    color: hsl(225deg 100% 75%);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.875rem;
@@ -99,13 +99,13 @@ const StyledWrapper = styled.div`
     transition-delay: 0.52s;
   }
 
-  button:active {
+  /* button:active {
     background: #4fd1c5;
     background: linear-gradient(to top right, #4fd1c5, #ae00ff);
     color: #bfbfbf;
     box-shadow: 0 0 8px #4fd1c5, 0 0 8px #ae00ff, 0 0 8px #4fd1c5;
     transition: 0.1s;
-  }
+  } */
 
   button:active
     span:nth-child(1)

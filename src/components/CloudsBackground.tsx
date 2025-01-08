@@ -7,7 +7,7 @@ interface CloudsBackgroundProps {
 const CloudsBackground: React.FC<CloudsBackgroundProps> = ({ children }) => {
   return (
     <div className="relative  min-h-screen flex justify-center">
-      <div className="absolute inset-0 overflow-hidden bg-third">
+      <div className="absolute inset-0 overflow-hidden bg-three">
         <div className="relative w-full  bg-custom-gradient flex flex-col justify-end items-center overflow-clip">
           <svg
             width="5120"
