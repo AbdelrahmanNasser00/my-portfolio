@@ -1,4 +1,10 @@
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 import ProjectDeployment from "./ProjectDeployment";
 import ProjectGithub from "./ProjectGithub";
 
@@ -29,11 +35,13 @@ const ProjectCard: React.FC<cardProps> = ({
                 src={image}
                 alt={`${title} screenshot ${index + 1}`}
                 className="rounded-t-lg"
-                loading="eager"
+                loading="lazy"
               />
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className="left-1 shadow-2xl" />
+        <CarouselNext className="right-1 shadow-2xl" />
       </Carousel>
       <div className="p-5">
         <h2 className="text-xl font-semibold text-secondary">{title}</h2>
