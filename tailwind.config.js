@@ -74,7 +74,7 @@ export default {
       },
       textColor: {},
       fontFamily: {
-        fontFamilyMono: ['Cartograph CF", monospace'],
+        fontFamilyMono: ['"Cartograph CF"', "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
