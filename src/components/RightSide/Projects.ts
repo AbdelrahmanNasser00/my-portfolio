@@ -15,6 +15,10 @@ import project2Image4 from "../../assets/imgs/project2Image4.png";
 import project2Image5 from "../../assets/imgs/project2Image5.png";
 import project2Image6 from "../../assets/imgs/project2Image6.png";
 
+import project3Image from "../../assets/imgs/project3Image.png";
+
+import project4Image from "../../assets/imgs/project4Image.png";
+
 interface Project {
   id: number;
   title: string;
@@ -88,15 +92,24 @@ const projects: Project[] = [
       "sweetalert2",
     ],
   },
-  //   {
-  //     id: 3,
-  //     title: "Project 3",
-  //     description: "This is a description of project 3",
-  //     images: [project1Image, project1Image, project1Image],
-  //     githubLink: "https://github.com/AbdelrahmanNasser00/project-3",
-  //     deploymentLink: "https://project-3.netlify.app",
-  //     skills: ["React", "TypeScript", "Material-UI"],
-  //   },
+  {
+    id: 3,
+    title: "Chatting Website",
+    description: "Developed a multi-user chat platform.",
+    images: [project3Image],
+    githubLink: "https://github.com/AbdelrahmanNasser00/ChatApp",
+    deploymentLink: "https://chat-app-3tcu.onrender.com/",
+    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "Socket.io"],
+  },
+  {
+    id: 4,
+    title: "Simple TO-DO",
+    description: "",
+    images: [project4Image],
+    githubLink: "https://github.com/AbdelrahmanNasser00/ToDoList",
+    deploymentLink: "https://letsdoiteg.netlify.app/",
+    skills: ["React", "Redux", "Material UI"],
+  },
 ];
 
 export default projects;
