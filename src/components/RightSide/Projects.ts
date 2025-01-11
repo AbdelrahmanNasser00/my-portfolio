@@ -47,7 +47,7 @@ const projects: Project[] = [
       project1Image9,
     ],
     githubLink: "https://github.com/AbdelrahmanNasser00/Book-Store",
-    deploymentLink: "",
+    deploymentLink: "https://gitbookeg.netlify.app/",
     skills: [
       "React",
       "Redux Toolkit",
