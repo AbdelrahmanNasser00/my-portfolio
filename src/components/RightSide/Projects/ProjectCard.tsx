@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel";
+} from "../../ui/carousel";
 import ProjectDeployment from "./ProjectDeployment";
 import ProjectGithub from "./ProjectGithub";
 
@@ -24,7 +24,6 @@ const ProjectCard: React.FC<cardProps> = ({
   deploymentLink,
   skills,
 }) => {
-  console.log(images);
   return (
     <div className="w-full border border-color-content-outline border-radius rounded-lg mb-5">
       <Carousel>

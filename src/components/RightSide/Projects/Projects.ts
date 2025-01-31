@@ -1,23 +1,23 @@
-import project1Image from "../../assets/imgs/project1Image.png";
-import project1Image2 from "../../assets/imgs/project1Image2.png";
-import project1Image3 from "../../assets/imgs/project1Image3.png";
-import project1Image4 from "../../assets/imgs/project1Image4.png";
-import project1Image5 from "../../assets/imgs/project1Image5.png";
-import project1Image6 from "../../assets/imgs/project1Image6.png";
-import project1Image7 from "../../assets/imgs/project1Image7.png";
-import project1Image8 from "../../assets/imgs/project1Image8.png";
-import project1Image9 from "../../assets/imgs/project1Image9.png";
+import project1Image from "../../../assets/imgs/project1Image.png";
+import project1Image2 from "../../../assets/imgs/project1Image2.png";
+import project1Image3 from "../../../assets/imgs/project1Image3.png";
+import project1Image4 from "../../../assets/imgs/project1Image4.png";
+import project1Image5 from "../../../assets/imgs/project1Image5.png";
+import project1Image6 from "../../../assets/imgs/project1Image6.png";
+import project1Image7 from "../../../assets/imgs/project1Image7.png";
+import project1Image8 from "../../../assets/imgs/project1Image8.png";
+import project1Image9 from "../../../assets/imgs/project1Image9.png";
 
-import project2Image from "../../assets/imgs/project2Image.png";
-import project2Image2 from "../../assets/imgs/project2Image2.png";
-import project2Image3 from "../../assets/imgs/project2Image3.png";
-import project2Image4 from "../../assets/imgs/project2Image4.png";
-import project2Image5 from "../../assets/imgs/project2Image5.png";
-import project2Image6 from "../../assets/imgs/project2Image6.png";
+import project2Image from "../../../assets/imgs/project2Image.png";
+import project2Image2 from "../../../assets/imgs/project2Image2.png";
+import project2Image3 from "../../../assets/imgs/project2Image3.png";
+import project2Image4 from "../../../assets/imgs/project2Image4.png";
+import project2Image5 from "../../../assets/imgs/project2Image5.png";
+import project2Image6 from "../../../assets/imgs/project2Image6.png";
 
-import project3Image from "../../assets/imgs/project3Image.png";
+import project3Image from "../../../assets/imgs/project3Image.png";
 
-import project4Image from "../../assets/imgs/project4Image.png";
+import project4Image from "../../../assets/imgs/project4Image.png";
 
 interface Project {
   id: number;
@@ -28,7 +28,6 @@ interface Project {
   deploymentLink: string;
   skills: string[];
 }
-console.log(project1Image, project1Image2, project1Image3);
 
 const projects: Project[] = [
   {

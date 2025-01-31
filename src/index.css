@@ -6,8 +6,10 @@
   font-family: "Wotfard", "Wotfard-fallback", sans-serif;
   --font-family-mono: "Cartograph CF", monospace;
 }
+
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
@@ -18,11 +20,9 @@ html {
 body {
   /* background: url("https://my.spline.design/miniroomartcopy-b0e39fa180eba28f8e328bdb3dc9b4d1/"); */
   /* background-color: #1a202c; */
-  background-color: linear-gradient(
-    to bottom,
-    hsl(214deg 40% 11%),
-    hsl(200deg 50% 30%)
-  );
+  background-color: linear-gradient(to bottom,
+      hsl(214deg 40% 11%),
+      hsl(200deg 50% 30%));
   color: #94a3b8;
   line-height: 1.75;
 }
@@ -55,6 +55,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -87,6 +88,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
