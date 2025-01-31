@@ -14,7 +14,7 @@ const timeline: TimelineEvent[] = [
     title: "Egyptian Collegiate Programming Contest ECPC",
     date: "2022-08-25",
     description:
-      "Took part in the International Collegiate Programming Contest (ICPC), solving algorithmic challenges under time constraints. Improved coding efficiency, logical reasoning, and collaboration skills while competing against top programmers.",
+      "Took part in the Egyptian Collegiate Programming Contest (ICPC), solving algorithmic challenges under time constraints. Improved coding efficiency, logical reasoning, and collaboration skills while competing against top programmers.",
   },
   {
     title: "FCI Assiut University - Computer Science Department",
