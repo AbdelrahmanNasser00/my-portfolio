@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 import projects from "./Projects";
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="mb-16 w-fulls">
+    <section id="projects">
       <h2 className="text-xl lg:hidden uppercase font-bold mb-4 text-custom-red">
         Projects
       </h2>

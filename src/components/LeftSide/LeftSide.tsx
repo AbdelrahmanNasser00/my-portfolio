@@ -5,29 +5,48 @@ import DownloadCvBtn from "./DownloadCVBtn";
 const LeftSide = () => {
   const [activeSection, setActiveSection] = useState<string>("#about");
 
-  useEffect(() => {
-    if (activeSection === "#about") {
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    }
-  }, [activeSection]);
+ useEffect(() => {
+  const sections = document.querySelectorAll("section");
+  if (!sections.length) return;
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-    sections.forEach((section) => observer.observe(section));
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
+  const handleScroll = () => {
+    const viewportHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition < 100) {
+      setActiveSection("#about");
+      return;
+    }
+    const viewportCenter = scrollPosition + (viewportHeight / 2);
+
+    for (const section of sections) {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (viewportCenter >= sectionTop && viewportCenter < sectionBottom) {
+        setActiveSection(`#${section.id}`);
+        break;
+      }
+    }
+  };
+
+  const debounce = <T extends (e: Event) => void>(func: T, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return (e: Event) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(e), wait);
     };
-  }, [activeSection]);
+  };
+
+  const debouncedHandleScroll = debounce(handleScroll, 50);
+  handleScroll();
+  window.addEventListener('scroll', debouncedHandleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', debouncedHandleScroll);
+  };
+}, []);
+
 
   const links = [
     { href: "#about", label: "About" },
