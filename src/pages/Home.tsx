@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div className="relative ">
       <div className=" flex justify-end py-2 fixed w-[67%]">
-        <Switch />
+{/*         <Switch /> */}
       </div>
       <div className="max-w-screen-xl lg:flex lg:flex-row px-6 md:px-12">
         <LeftSide />
