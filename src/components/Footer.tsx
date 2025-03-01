@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             <svg
               stroke="currentColor"
               fill="rgb(74 222 128)"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 448 512"
               height="1.2em"
               width="1.2em"

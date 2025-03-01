@@ -1,6 +1,54 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactUsDesignIdea = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    console.log(formData);
+    emailjs
+      .send(
+        "service_mkgjsig",
+        "template_id9vrh6",
+        formData,
+        "srwD8L6CfBigIc5Hc"
+      )
+      .then(
+        () => {
+          setSuccess("Message sent successfully");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error);
+          setSuccess("Failed to send message. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <section id="contact" className="text-gray-100 pb-24">
       {/* Your existing content */}
@@ -55,7 +103,7 @@ const ContactUsDesignIdea = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-2">
+            <form className="space-y-2" onSubmit={handleSubmit}>
               <div className="flex space-x-1">
                 <div>
                   <label
@@ -66,6 +114,8 @@ const ContactUsDesignIdea = () => {
                   <input
                     name="name"
                     type="text"
+                    value={formData.name}
+                    onChange={handleChange}
                     id="name"
                     className="w-full px-4 py-2 focus:outline-none rounded-lg bg-[#2a2a2a] border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="Ex. Abdelrahman"
@@ -81,6 +131,8 @@ const ContactUsDesignIdea = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full focus:outline-none px-4 py-2 rounded-lg bg-[#2a2a2a] border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="Ex. Abdo@gmail.com"
                   />
@@ -97,6 +149,8 @@ const ContactUsDesignIdea = () => {
                   type="subject"
                   id="subject"
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   className="w-full focus:outline-none px-4 py-3 rounded-lg bg-[#2a2a2a] border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="Ex. Message Title"
                 />
@@ -111,6 +165,8 @@ const ContactUsDesignIdea = () => {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
                   className="w-full focus:outline-none px-4 py-3 rounded-lg bg-[#2a2a2a] border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="Ex. Hello, I'd like to work with you!"></textarea>
@@ -118,10 +174,14 @@ const ContactUsDesignIdea = () => {
 
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium transition-all duration-300 flex items-center justify-center gap-2 group">
-                <span>Send Message</span>
+                <span>{loading ? "Sending..." : "Send Message"}</span>
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
+              {success && (
+                <p className="text-center mt-2 text-green-400">{success}</p>
+              )}
             </form>
           </div>
         </div>
