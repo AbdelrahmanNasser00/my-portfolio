@@ -51,10 +51,8 @@ const ContactUsDesignIdea = () => {
 
   return (
     <section id="contact" className="text-gray-100 pb-24">
-      {/* Your existing content */}
-
       {/* Contact Section */}
-      <section className=" px-4 relative">
+      <div className=" px-4 relative">
         {/* Background gradient */}
         <div className="absolute inset-0 from-transparent to-[#2a2a2a] opacity-50"></div>
 
@@ -65,7 +63,7 @@ const ContactUsDesignIdea = () => {
 
           <div className="grid md:grid-cols-2 gap-12 mt-1">
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 md:order-1">
               <h3 className="text-4xl text-slate-300 text-left font-semibold mb-6">
                 Send Us a Note and Initiate the Dialogue!
               </h3>
@@ -103,7 +101,9 @@ const ContactUsDesignIdea = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-2" onSubmit={handleSubmit}>
+            <form
+              className="space-y-2 order-1 md:order-2"
+              onSubmit={handleSubmit}>
               <div className="flex space-x-1">
                 <div>
                   <label
@@ -185,7 +185,7 @@ const ContactUsDesignIdea = () => {
             </form>
           </div>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
