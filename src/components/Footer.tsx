@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
         <BottomClouds />
       </div>
       <ContactUsDesignIdea />
-      <div className="flex w-full mx-auto justify-between max-w-4xl">
-        <p className="md:text-base text-gray-100 text-sm md:font-normal font-light flex items-center gap-2 group">
+      <div className="flex w-full mx-auto flex-col md:flex-row justify-center md:justify-between max-w-4xl">
+        <p className="md:text-base py-2 text-gray-100 text-sm md:font-normal font-light flex items-center gap-2 group">
           Follow Me On Social Media
           <span className="group-hover:translate-x-3 transition">
             <ArrowRight />
@@ -50,14 +50,11 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="container bg-transparent mx-auto px-4">
+      <div className="container bg-transparent mx-auto my-4">
         <p className="text-sm text-gray-300">
           © {new Date().getFullYear()} Abdelrahman Abdelnasser. All rights
           reserved.
         </p>
-        {/* <div className="flex justify-center space-x-4 mt-3">
-         
-        </div> */}
       </div>
       <FooterClouds />
     </footer>
