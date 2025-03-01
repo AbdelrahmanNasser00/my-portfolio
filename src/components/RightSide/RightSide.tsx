@@ -1,5 +1,6 @@
 import AboutSection from "./About/AboutSection";
 import ContactSection from "./Contact/ContactSection";
+import ContactUsDesignIdea from "./Contact/ContactUsDesignIdea";
 import ProjectsSection from "./Projects/ProjectsSection";
 import SkillsSection from "./Skills/SkillsSection";
 import TimelineSection from "./Timeline/TimelineSection";
@@ -11,7 +12,8 @@ const RightSide = () => {
       <SkillsSection />
       <ProjectsSection />
       <TimelineSection />
-      <ContactSection />
+      {/* <ContactSection />
+      <ContactUsDesignIdea /> */}
     </main>
   );
 };

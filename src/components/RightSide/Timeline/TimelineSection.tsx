@@ -2,7 +2,7 @@ import { CalendarDays } from "lucide-react";
 import { useEffect, useState } from "react";
 import timeline from "./Timeline";
 
-export default function TimelineSection() {
+const TimelineSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -35,19 +35,19 @@ export default function TimelineSection() {
       <div className="container ">
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-[28px] top-0 bottom-0 w-[2px] bg-pink-500/20" />
+          <div className="absolute left-[11px] top-0 bottom-0 w-[2px] bg-pink-500/20" />
 
           {/* Events */}
           <div className="space-y-8">
             {timeline.map((event, index) => (
               <div
                 key={index}
-                className={`timeline-event relative pl-16 transition-opacity duration-300 ${
+                className={`timeline-event relative pl-8 transition-opacity duration-300 ${
                   activeIndex === index ? "opacity-100" : "opacity-50"
                 }`}>
                 {/* Timeline dot */}
                 <div
-                  className={`absolute left-[22px] top-[28px] w-[14px] h-[14px] rounded-full border-[3px] transition-all duration-300 ${
+                  className={`absolute left-[5px] top-[28px] w-[14px] h-[14px] rounded-full border-[3px] transition-all duration-300 ${
                     activeIndex === index
                       ? "border-pink-500 bg-pink-500"
                       : "border-pink-500/50 bg-[#1a1b1e]"
@@ -79,4 +79,5 @@ export default function TimelineSection() {
       </div>
     </section>
   );
-}
+};
+export default TimelineSection;

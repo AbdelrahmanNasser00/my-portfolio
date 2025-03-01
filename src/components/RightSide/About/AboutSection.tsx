@@ -16,12 +16,22 @@ const AboutSection = () => {
         about
       </h2>
       <div>
-        <p className="mb-4">
-          I’m a Software Engineer specializing in front-end development. I craft
-          accessible, high-performance web applications using modern
-          technologies like <span className="font-bold ">React and Redux</span>.
-          My passion lies in creating seamless user experiences and writing
-          clean, maintainable code that brings designs to life.
+        <p className="mb-4 text-textColor text-xl">
+          As a Full-Stack Software Engineer, I specialize in building end-to-end
+          web applications using the MERN stack (MongoDB, Express.js, React,
+          Node.js), delivering robust and scalable solutions.
+        </p>
+        <p className="mb-4 text-textColor text-xl">
+          My expertise spans both front-end and back-end development, with a
+          focus on creating responsive interfaces using{" "}
+          <span className="font-bold">React</span> and building reliable
+          server-side applications with{" "}
+          <span className="font-bold">Node.js, Express.js, and MongoDB</span>.
+        </p>
+        <p className="mb-4 text-textColor text-xl">
+          I am passionate about clean code architecture and staying current with
+          industry best practices to deliver high-quality applications that
+          drive business value.
         </p>
       </div>
     </section>

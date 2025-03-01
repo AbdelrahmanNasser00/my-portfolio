@@ -72,7 +72,9 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
-      textColor: {},
+      textColor: {
+        textColor: "#e3e6e8",
+      },
       fontFamily: {
         fontFamilyMono: ['"Cartograph CF"', "monospace"],
       },
@@ -80,6 +82,16 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        float: "float 20s ease-in-out infinite",
+        "float-reverse": "float 15s ease-in-out infinite reverse",
       },
     },
   },
