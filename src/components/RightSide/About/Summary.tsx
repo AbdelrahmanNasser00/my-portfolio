@@ -16,8 +16,8 @@ const Summary = () => {
           opacity: 1,
           duration: 0.002,
           stagger: 0.005,
-          delay: 1.2,
-          ease: "power1.inOut",
+          delay: 1.5,
+          ease: "power3.inOut",
         }
       );
     }
