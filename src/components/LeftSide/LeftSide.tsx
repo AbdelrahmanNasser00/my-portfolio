@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import DownloadCvBtn from "./DownloadCVBtn";
 import { Github, Linkedin } from "lucide-react";
+import GsapAnimation from "../GSAPAnimation";
 
 const LeftSide = () => {
   const [activeSection, setActiveSection] = useState<string>("#about");
@@ -59,9 +60,29 @@ const LeftSide = () => {
     <header className="pt-24 lg:w-1/2 w-full lg:h-screen lg:sticky lg:top-0">
       <div>
         <h1 className="text-textColor text-4xl font-bold tracking-tight sm:text-6xl">
-          Hi there!
-          <br /> I'm Abdelrahman.
+          <GsapAnimation
+            gsapProps={{
+              opacity: 0,
+              y: -100,
+              duration: 0.7,
+              delay: 1,
+              ease: "power3.out",
+            }}>
+            <span>Hi there!</span>
+          </GsapAnimation>
+          <br />
+          <GsapAnimation
+            gsapProps={{
+              opacity: 0,
+              x: -100,
+              duration: 0.7,
+              delay: 1,
+              ease: "power3.out",
+            }}>
+            <span>I'm Abdelrahman.</span>
+          </GsapAnimation>
         </h1>
+
         {/* <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
           Software Engineer
         </h2> */}
@@ -69,16 +90,26 @@ const LeftSide = () => {
           I build accessible, pixel-perfect digital experiences for the web.
         </p> */}
         <nav className="mt-14 hidden lg:block">
-          <ul>
-            {links.map((link, index) => (
-              <NavItem
-                key={index}
-                href={link.href}
-                label={link.label}
-                isActive={activeSection === link.href}
-              />
-            ))}
-          </ul>
+          <GsapAnimation
+            gsapProps={{
+              opacity: 0,
+              x: -50,
+              stagger: 1,
+              duration: 0.8,
+              delay: 1,
+              ease: "power1.in",
+            }}>
+            <ul>
+              {links.map((link, index) => (
+                <NavItem
+                  key={index}
+                  href={link.href}
+                  label={link.label}
+                  isActive={activeSection === link.href}
+                />
+              ))}
+            </ul>
+          </GsapAnimation>
         </nav>
       </div>
       {/* <ul className="flex mt-16 text-slate-400 items-center">
@@ -120,20 +151,29 @@ const LeftSide = () => {
             </svg>
           </a>
         </li> */}
-      <div className="flex space-x-4 mt-8">
-        <a
-          href="https://github.com/yourusername"
-          className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-blue-500/20 transition-colors">
-          <Github className="w-5 h-5 text-blue-400" />
-        </a>
-        <a
-          href="https://linkedin.com/in/yourusername"
-          className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-purple-500/20 transition-colors">
-          <Linkedin className="w-5 h-5 text-purple-400" />
-        </a>
-        <DownloadCvBtn />
-      </div>
-
+      <GsapAnimation
+        gsapProps={{
+          opacity: 0,
+          x: -50,
+          stagger: 1,
+          duration: 0.8,
+          delay: 1,
+          ease: "power1.in",
+        }}>
+        <div className="flex space-x-4 mt-8">
+          <a
+            href="https://github.com/yourusername"
+            className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-blue-500/20 transition-colors">
+            <Github className="w-5 h-5 text-blue-400" />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-purple-500/20 transition-colors">
+            <Linkedin className="w-5 h-5 text-purple-400" />
+          </a>
+          <DownloadCvBtn />
+        </div>
+      </GsapAnimation>
       {/* <li>
         </li> */}
       {/* </ul> */}
