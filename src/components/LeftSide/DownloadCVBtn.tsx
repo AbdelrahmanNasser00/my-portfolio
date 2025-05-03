@@ -3,7 +3,7 @@ import styled from "styled-components";
 const DownloadCVBtn = () => {
   const handleDownload = () => {
     const downloadLink =
-      "https://drive.google.com/file/d/1OwXuoRpTv1B9Dvp2K4fdjvSlpVQzz5xs/view?usp=sharing";
+      "https://drive.google.com/file/d/1hEcY3yeBiWAYnws0zQWLRjcYtG5YcL0e/view?usp=sharing";
     window.open(downloadLink, "_blank", "noopener,noreferrer");
   };
   return (
