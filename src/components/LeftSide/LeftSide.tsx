@@ -117,12 +117,12 @@ const LeftSide = () => {
         }}>
         <div className="flex space-x-4 mt-8">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/AbdelrahmanNasser00"
             className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-blue-500/20 transition-colors">
             <Github className="w-5 h-5 text-blue-400" />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/abdelrahman-abdelnasser00/"
             className="p-3 rounded-lg bg-[#2a2a2a] hover:bg-purple-500/20 transition-colors">
             <Linkedin className="w-5 h-5 text-purple-400" />
           </a>
